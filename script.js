@@ -1,13 +1,12 @@
 //your code here
-let btn=document.getElementById("addTodoBtn")
-btn.addEventListener("click",funcall)
-function funcall(){
-	if(document.getElementById("newTodoInput").value!=""){
-	    let store=document.createElement("li")
-	    store.innerText=document.getElementById("newTodoInput").value
-        todoList.appendChild(store)
+function myFunc() {
+	let insertedValue = document.getElementById("newTodoInput").value;
+	if(insertedValue != "") {
+		let orderedList = document.getElementsByTagName("ol")[0];
+		let createList = document.createElement("li");
+		createList.textContent = insertedValue;
+		orderedList.appendChild(createList);
+		document.getElementById("newTodoInput").value = "";
 	}
-    else alert("write something")
-	document.getElementById("newTodoInput").value=""
 }
 
