@@ -1,12 +1,17 @@
 //your code here
-function addtodo(){
-    let btn1 = document.getElementById("todoList")
-    
-    let btn = document.createElement('li')
-    btn.textContent="blue"
+const input = document.getElementById('newTodoInput')
+const button = document.getElementById('addTodoBtn')
+const ol = document.getElementById('todoList')
 
-    btn1.appendChild(btn)
-    
-       
+const onClick = () => {
+    const todo = input.value
+    if (!todo) return;
+
+    const li = document.createElement('li')
+    li.innerText = todo
+    ol.appendChild(li)
+    input.value = ''
 }
+
+button.addEventListener('click', onClick)
 
