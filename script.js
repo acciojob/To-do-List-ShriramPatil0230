@@ -1,17 +1,13 @@
 //your code here
-const input = document.getElementById('newTodoInput')
-const button = document.getElementById('addTodoBtn')
-const ol = document.getElementById('todoList')
+var todoValue = document.getElemnetById("newTodoInput");
+var btn =document.getElementById("addTodoBtn");
+var ol = document.getElementById("todoList");
 
-const onClick = () => {
-    const todo = input.value
-    if (!todo) return;
-
-    const li = document.createElement('li')
-    li.innerText = todo
-    ol.appendChild(li)
-    input.value = ''
+function addTodo(){
+	if(todoValue.value){
+		var li =document.createElement('li');
+		li.textContent = todoValue.value;
+		ol.appendChild(li);
+		todoValue.value="";
+	}
 }
-
-button.addEventListener('click', onClick)
-
