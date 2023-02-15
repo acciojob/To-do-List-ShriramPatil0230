@@ -9,7 +9,7 @@ function addTodo(){
 	var li =document.createElement('li');
 			li.textContent = todoValue.value;
 			ol.appendChild(li);
-			todoValue.value="";
+			todoValue.value= "";
 		
 	}
 }
