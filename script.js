@@ -6,10 +6,10 @@ var ol = document.getElementById("todoList");
 function addTodo(){
 	
 	if(todoValue.value){
-	var li =document.createElement('li');
-			li.textContent = todoValue.value;
+	var lii =document.createElement('li');
+			lii.textContent = todoValue.value;
 			todoValue.value= "";
-			ol.appendChild(li)
+			ol.appendChild(li);
 		
 	}
 }
