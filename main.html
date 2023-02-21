@@ -13,15 +13,27 @@
     <!-- your javascript must add todos inside the following tag as <li> tags! -->
     <ol id="todoList"></ol>
 	<script>
-document.querySelector('#addTodoBtn').onclick = function(){
-    if(document.querySelector('#newTodoInput').value.length == 0){
-        alert("Kindly Enter Task Name!!!!")
-    }
+let input = document.getElementById('newTodoInput');
+let button = document.getElementById('addTodoBtn');
 
-    else{
-        document.querySelector('#todoList').innerHTML += `
-                    ${document.querySelector('#newTodoInput').value}`;
-		}
-    }</script>
+button.addEventListener("click", validate);
+
+function validate (e) {
+    let data = input.value ;  
+    data = data.trim()  
+  
+    if (data == ""){
+     alert('Empty data not allowed...!')
+    return 
+    } 
+    else {
+        let space = document.createElement ('li')
+        space.innerHTML = data ;
+        document.body.append(space);
+		input.value = "";
+       
+    }
+    
+}</script>
 </body>
 </html>
